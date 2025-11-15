@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="weather.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>Weather App</h1>
+      <p class="subtitle">Search any city to get current weather</p>
+    </header>
+
+    <section class="search">
+      <input
+        id="cityInput"
+        type="text"
+        placeholder="Enter city name (e.g. Mumbai)"
+        aria-label="City name"
+      />
+      <button id="searchBtn" aria-label="Search">Search</button>
+    </section>
+
+    <section id="weatherCard" class="card hidden" aria-live="polite">
+      <div class="card-top">
+        <div class="city-info">
+          <h2 id="cityName">City</h2>
+          <p id="description" class="desc">Description</p>
+        </div>
+        <div class="temp-info">
+          <img id="icon" alt="weather icon" class="icon" src="" />
+          <div id="temperature" class="temp">--°C</div>
+        </div>
+      </div>
+
+      <div class="card-bottom">
+        <div class="meta">
+          <strong>Feels like:</strong> <span id="feels">--°C</span>
+        </div>
+        <div class="meta">
+          <strong>Humidity:</strong> <span id="humidity">--%</span>
+        </div>
+        <div class="meta">
+          <strong>Wind:</strong> <span id="wind">-- m/s</span>
+        </div>
+      </div>
+    </section>
+
+    <div id="message" class="message"></div>
+  </main>
+
+  <script src="weather.js"></script>
+</body>
+</html>
